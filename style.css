@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #14213d;
+  --blue: #1d4e89;
+  --light: #f7f9fc;
+  --white: #ffffff;
+  --accent: #fca311;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #d7dee8;
+  --space: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: var(--space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  top: 0px;
+  position: sticky;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background-color: var(--blue);
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) var(--space);
+}
+
+section h1 {
+  color: var(--dark);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  margin-bottom: var(--space);
+  border-left: 6px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.about_box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space);
+  box-shadow: 0 2px 8px rgba(20, 33, 61, 0.08);
+}
+
+.photo_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.photo_box img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid var(--blue);
+}
+
+.photo_box p {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.about_text h1 {
+  border: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.about_text h2 {
+  color: var(--blue);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin: 1rem 0 0.5rem;
+}
+
+.about_text p {
+  color: var(--muted);
+  text-align: justify;
+}
+
+.about_text ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.about_text li {
+  background-color: var(--light);
+  border: 1px solid var(--border);
+  color: var(--dark);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#myaspirations .aspi {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--blue);
+  border-radius: 12px;
+  padding: var(--space);
+  color: var(--muted);
+  text-align: justify;
+}
+
+.design_box {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space);
+}
+
+.design_box > p {
+  color: var(--muted);
+  margin-bottom: var(--space);
+  text-align: justify;
+}
+
+.design_row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: var(--space);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--light);
+}
+
+.design_row + .design_row {
+  margin-top: var(--space);
+}
+
+.design_row img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+button {
+  border: none;
+  background-color: var(--blue);
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+button a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+button a:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.contak {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--space);
+}
+
+#contact p {
+  color: var(--muted);
+  text-align: center;
+}
+
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1.25rem var(--space);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .about_box {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+  }
+
+  .design_row {
+    flex-direction: column;
+  }
+}
